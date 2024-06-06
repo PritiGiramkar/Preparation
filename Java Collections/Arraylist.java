@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
-
+import java.util.ListIterator;
+import com.Student.*;
 public class Arraylist {
     public static void main(String[] arr){
 
@@ -42,7 +43,33 @@ public class Arraylist {
          By forEachRemaining() method.
          *
          */
+
+
+        /**
+         * Iterate using the list iterator
+         */
+
+        ListIterator <Integer> li = arrayList.listIterator(arrayList.size());
+
+        while(li.hasPrevious())
+        {
+            System.out.println(li.previous());
+        }
+
+        /**
+         * Adding object type to Arralist
+         */
+
+        ArrayList <Student> studentArrayList = new ArrayList<>();
+
+        Student student = new Student(1,"priti");
+
+        studentArrayList.add(student);
+
+        System.out.println(studentArrayList.get(0).name);
+        System.out.println(studentArrayList.get(0).rollno);
+
     }
 
 
-    }
+}
